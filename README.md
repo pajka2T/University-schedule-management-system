@@ -1,36 +1,36 @@
-# Instrukcja uruchomienia aplikacji
+# Application launch instructions
 
-## 1. Uruchomienie aplikacji
+## 1. Application launch
 
-Aplikacja wymaga uruchomienia serwera bazodanowego i serwisu internetowego, aby mogła poprawnie działać.
+The application requires a database server and web service to be running in order to function properly.
 
-Możliwe sposoby uruchomienia serwera bazodanowego:
+Possible ways to launch the database server:
 
-### a) Z poziomu IDE (np. IntelliJ IDEA, Eclipse)
+### a) From the IDE level (e.g. IntelliJ IDEA, Eclipse)
 
-1. Otwórz klasę główną `IoApplication.java`
-2. Uruchom metodę `main()` (np. klikając prawym przyciskiem myszy → "Run IoApplication")
+1. Open the main class `IoApplication.java`
+2. Run the `main()` method (e.g. right-click → "Run IoApplication")
 
-### b) Z linii poleceń (Gradle)
+### b) From the command line (Gradle)
 
 ./gradlew bootRun
 
-Sposób uruchomienia serwisu internetowego:
-1. Otwórz terminal (np. cmd lub Windows PowerShell na Windowsie).
-2. Przejdź do głównego katalogu projektu (uruchamiając terminal w środowisku, w którym uruchomiony jest projekt, można pominąć ten punkt).
-3. Za pomocą polecenia `cd/src/main/frontend/io-app` wejdź do katalogu zawierającego pliki serwisu.
-4. Uruchom serwis używając polecenia `npm start`.  
+How to run the web service:
+1. Open a terminal (e.g., Command Prompt or Windows PowerShell on Windows).
+2. Navigate to the project’s root directory (you can skip this step if the terminal is already opened in the project environment).
+3. Use the command `cd src/main/frontend/io-app` to enter the directory containing the service files.
+4. Start the service using the command `npm start`.
 
-## 2. Dostępne interfejsy
+## 2. Available interfaces
 
-### a) Z poziomu IDE (np. IntelliJ IDEA, Eclipse)
+### a) From the IDE level (e.g. IntelliJ IDEA, Eclipse)
 
-1. Endpointy REST http://localhost:8080/{endpoint_name}
+1. REST endpoints http://localhost:8080/{endpoint_name}
 
-2. Dokumentacja API (Swagger UI) http://localhost:8080/swagger-ui/index.html#
+2. API documentation (Swagger UI) http://localhost:8080/swagger-ui/index.html#
 
-3. Konsola H2 (baza danych w pamięci) http://localhost:8080/h2-console
-   ### Dane logowania do bazy H2:
+3. H2 console (in-memory database) http://localhost:8080/h2-console
+   ### H2 database login credentials:
    ##### JDBC URL: jdbc:h2:mem:testdb
    ##### User Name: sa
-   ##### Password: (puste - pozostaw puste pole)
+   ##### Password: (empty - leave the field empty)
